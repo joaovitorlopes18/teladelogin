@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login - Stop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6c6c6cd0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f5afba;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .wheel {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background: conic-gradient(
+                #ff0000 20% 30%,    /* Red */
+                #0013a2 30% 40%,   /* Green */
+                #44ff8695 40% 50%,   /* Blue */
+                #7e69c7 50% 60%,   /* Cyan */
+                #000272 60% 70%   /* Red */
+            );
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tela de Login - Stop</h2>
+        <div class="wheel"></div>
+        <form action="seu_script_de_autenticacao.php" method="POST">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+</body>
+</html>
